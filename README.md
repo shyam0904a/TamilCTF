@@ -37,6 +37,7 @@ The lic version is unknown
 *We cant overwrite RSP with 8 byte value , only 6 Bytes can be used else we get general protextion error * (Canonical and non canonical address comes to play )*
 #### Using GEF & finding offset
 
+![screenshot](https://github.com/shyam0904a/TamilCTF/blob/master/Pasted%20image%2020210930134637.png)
 
 
 
