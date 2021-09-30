@@ -125,3 +125,42 @@ The lic version is unknown
 
 *WE GET THE FLAG *
 ## TamilCTF{ReT_1s_M0rE_p0wErFu1_a5_LIBC}
+
+
+
+
+
+# Bases 485 Points ,22 solves
+
+***We are give a file encoded in some randome gibrish***
+```bash
+![image](https://user-images.githubusercontent.com/67697492/135418886-db201b88-1274-4261-ad21-b2184774cea7.png)
+```
+
+***After a bit of researching and previous ctf ideas found out that this  is a base65536 encoded file ***
+***BASE65536 as per records:***
+	> Base65536 is a binary encoding optimised for UTF-32-encoded text. (For transmitting data through Twitter, Base65536 is now considered obsolete; see 		> Base2048.) This JavaScript module, base65536, is the first implementation of this encoding.
+	> Base65536 uses only "safe" Unicode code points - no unassigned code points, no whitespace, no control characters, etc..
+	
+## To deocde the base65536 we first convert it into a unicode using npm module of base65536
+```javascript
+	import { encode, decode } from 'base65536'
+import fs from 'fs'
+
+var  data=fs.readFileSync('file.txt').toString('utf-8')
+var decoded = new Uint8Array(decode(data))
+
+fs.writeFileSync('out',decoded)
+```
+__This gives us a decoded output :26p0EtovXlssmYqbk1UON3JCIFVyYW3V3culA1cJ0AJ8mHvzgWbefttYEpfYlcpt9nh3oZiaWI24d0jzcxBOdq0Ybes3EKUw7GEEfLYM0qpp___
+ 	> This doesnt look like any known base encodings 
+	> After a bit of googling found out that this is a base91 encoded value
+
+Fun thing ***Found a github repo that finds and deocdes the known basex values***
+
+[Github](https://github.com/mufeedvh/basecrack)
+	
+**After that thats a matter of multiple times of decoding**
+	> The order goes like BASE65535->BASE91->BASE62->BASE32->ASCII85->FLAG
+***FLAG***
+## TamilCTF{B4s3_C1ph3r_4r3_re4lly_c00l!!}
