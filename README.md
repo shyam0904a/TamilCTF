@@ -20,6 +20,7 @@
 ## Analysing the binary on Ghidra
 
 
+
 ![screenshot](Pasted image 20210930131942.png)
 
 #### There is no input bound checking 
