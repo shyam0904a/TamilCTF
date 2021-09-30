@@ -21,7 +21,7 @@
 
 
 
-![screenshot](Pasted image 20210930131942.png)
+![screenshot](./Pasted image 20210930131942.png)
 
 #### There is no input bound checking 
 #### NX is enabled so no shellcoding
