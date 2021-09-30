@@ -139,8 +139,9 @@ The lic version is unknown
 噯缾𔔸𠅻診噩ꔻꕳ𔔯煐鸩𠅙欫葦葔踥慚灩ꉊ蠫噰噷葌鹀𓈻𖤨𐘱𔑬訮桷陦ꄷ橪鰨𔔫ꉕ蔥𖠻𖡻詓败捄堲絠浩怦𔑢蝂潣縨𓌩蹗襠ꅮ洱𒀰萵饌鍟𒀲橒昻萳靓𔕧罀ᕣ
 ```
 
-***After a bit of researching and previous ctf ideas found out that this  is a base65536 encoded file ***
-***BASE65536 as per records:***
+***After a bit of researching and previous ctf ideas found out that this  is a base65536 encoded file***
+
+*BASE65536 as per records:*
 	- Base65536 is a binary encoding optimised for UTF-32-encoded text. (For transmitting data through Twitter, Base65536 is now considered obsolete; see 		- Base2048.) This JavaScript module, base65536, is the first implementation of this encoding.
 	- Base65536 uses only "safe" Unicode code points - no unassigned code points, no whitespace, no control characters, etc..
 	
